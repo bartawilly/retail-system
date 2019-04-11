@@ -1,5 +1,6 @@
 var express = require('express');
 var app = express();
+const PORT = process.env.PORT || 3000
 
 //set up template engine
 
@@ -44,6 +45,4 @@ app.get('/user', function(req, res) {
 
 //listen to port 
 
-app.listen(3000);
-
-console.log('you are listening to port 3000');
+app.listen(PORT, () => console.log(`Listening on ${ PORT }`));
